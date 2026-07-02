@@ -1,0 +1,351 @@
+import { motion } from 'framer-motion'
+
+function App() {
+  return (
+    <main className="min-h-screen bg-slate-950 text-white">
+      <section className="relative min-h-screen overflow-hidden px-6 pt-20">
+                <div className="absolute inset-0">
+          <motion.div
+            animate={{ y: [0, -18, 0], opacity: [0.3, 1, 0.3] }}
+            transition={{ duration: 4, repeat: Infinity }}
+            className="absolute left-[12%] top-[22%] h-2 w-2 rounded-full bg-cyan-300"
+          />
+
+          <motion.div
+            animate={{ y: [0, 20, 0], opacity: [0.2, 0.8, 0.2] }}
+            transition={{ duration: 5, repeat: Infinity }}
+            className="absolute right-[18%] top-[30%] h-2 w-2 rounded-full bg-blue-300"
+          />
+
+          <motion.div
+            animate={{ y: [0, -25, 0], opacity: [0.2, 0.9, 0.2] }}
+            transition={{ duration: 6, repeat: Infinity }}
+            className="absolute left-[25%] bottom-[22%] h-2 w-2 rounded-full bg-purple-300"
+          />
+
+          <motion.div
+            animate={{ y: [0, 16, 0], opacity: [0.3, 1, 0.3] }}
+            transition={{ duration: 4.5, repeat: Infinity }}
+            className="absolute right-[32%] bottom-[18%] h-2 w-2 rounded-full bg-cyan-200"
+          />
+        </div>
+
+        <nav className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between border-b border-white/10 bg-slate-950/70 px-6 py-4 backdrop-blur-xl md:px-10">
+          <p className="text-sm font-bold tracking-[0.35em] text-cyan-300">
+            SVK
+          </p>
+
+          <div className="hidden gap-8 text-sm text-slate-300 md:flex">
+            <a href="#about" className="hover:text-cyan-300">About</a>
+            <a href="#projects" className="hover:text-cyan-300">Projects</a>
+            <a href="#skills" className="hover:text-cyan-300">Skills</a>
+            <a href="#contact" className="hover:text-cyan-300">Contact</a>
+          </div>
+        </nav>
+
+        <div className="relative z-10 flex min-h-[75vh] items-center justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 35 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9 }}
+            className="max-w-5xl text-center"
+          >
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-cyan-300">
+              Personal Portfolio
+            </p>
+
+            <h1 className="mt-8 text-5xl font-extrabold tracking-tight md:text-6xl lg:text-7xl">
+              Shreevishnu Kotthuri
+            </h1>
+
+            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-300 md:text-xl">
+              BSc (Hons) Computer Science student at Heriot-Watt University Dubai,
+              preparing to specialise in Artificial Intelligence while building practical
+              projects in AI, ERP, and web applications.
+            </p>
+
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <span className="rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-200">
+                Artificial Intelligence
+              </span>
+              <span className="rounded-full border border-blue-400/30 bg-blue-400/10 px-4 py-2 text-sm text-blue-200">
+                React
+              </span>
+              <span className="rounded-full border border-purple-400/30 bg-purple-400/10 px-4 py-2 text-sm text-purple-200">
+                Python
+              </span>
+              <span className="rounded-full border border-slate-400/30 bg-slate-400/10 px-4 py-2 text-sm text-slate-200">
+                Odoo ERP
+              </span>
+            </div>
+
+            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <a
+                href="#projects"
+                className="rounded-full bg-cyan-400 px-8 py-3 text-sm font-bold text-slate-950 shadow-lg shadow-cyan-400/20 hover:bg-cyan-300"
+              >
+                View Projects
+              </a>
+
+              <a
+                href="#contact"
+                className="rounded-full border border-slate-600 px-8 py-3 text-sm font-bold text-slate-200 hover:border-cyan-300 hover:text-cyan-300"
+              >
+                Contact Me
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <motion.section
+        id="about"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+        className="scroll-mt-24 px-6 py-24"
+      >
+        <div className="mx-auto max-w-6xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-cyan-300">
+            About Me
+          </p>
+
+          <div className="mt-8 grid gap-8 md:grid-cols-[1.2fr_0.8fr]">
+            <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-8 shadow-2xl shadow-cyan-950/20">
+              <h2 className="text-3xl font-bold md:text-4xl">
+                Building practical skills across AI, ERP, and web development.
+              </h2>
+
+              <p className="mt-6 leading-8 text-slate-300">
+                I am studying BSc (Hons) Computer Science at Heriot-Watt University Dubai.
+                My current focus is strengthening my programming, software development,
+                and problem-solving skills while preparing for an Artificial Intelligence
+                specialisation in the later stage of my degree.
+              </p>
+
+              <p className="mt-4 leading-8 text-slate-300">
+                I enjoy building practical projects that connect technical learning with
+                real use cases, including AI applications, Odoo ERP modules, and modern
+                web interfaces.
+              </p>
+            </div>
+
+            <div className="grid gap-4">
+              <div className="rounded-3xl border border-cyan-400/20 bg-cyan-400/10 p-6">
+                <p className="text-3xl font-bold text-cyan-300">01</p>
+                <p className="mt-2 text-slate-300">AI-focused learning path</p>
+              </div>
+
+              <div className="rounded-3xl border border-blue-400/20 bg-blue-400/10 p-6">
+                <p className="text-3xl font-bold text-blue-300">02</p>
+                <p className="mt-2 text-slate-300">Hands-on project building</p>
+              </div>
+
+              <div className="rounded-3xl border border-purple-400/20 bg-purple-400/10 p-6">
+                <p className="text-3xl font-bold text-purple-300">03</p>
+                <p className="mt-2 text-slate-300">ERP and web application experience</p>
+              </div>
+            </div>
+          </div>
+                </div>
+      </motion.section>
+
+            <motion.section
+        id="projects"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+        className="scroll-mt-24 px-6 py-24"
+      >
+        <div className="mx-auto max-w-6xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-cyan-300">
+            Projects
+          </p>
+
+          <h2 className="mt-6 text-3xl font-bold md:text-4xl">
+            Practical projects I have built and worked on.
+          </h2>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 transition hover:-translate-y-2 hover:border-cyan-400/40">
+              <p className="text-sm text-cyan-300">AI Application</p>
+
+              <h3 className="mt-4 text-2xl font-bold">
+                NegotiAI
+              </h3>
+
+              <p className="mt-4 leading-7 text-slate-300">
+                An AI-powered negotiation practice app built during an 8-day challenge.
+                It helps users practise negotiation scenarios and improve responses.
+              </p>
+
+              <div className="mt-5 flex flex-wrap gap-2">
+                <span className="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300">Python</span>
+                <span className="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300">AI</span>
+                <span className="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300">Gradio</span>
+              </div>
+            </div>
+
+            <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 transition hover:-translate-y-2 hover:border-cyan-400/40">
+              <p className="text-sm text-cyan-300">ERP Development</p>
+
+              <h3 className="mt-4 text-2xl font-bold">
+                Odoo Real Estate Module
+              </h3>
+
+              <p className="mt-4 leading-7 text-slate-300">
+                A custom Odoo module with property listings, offers, tags, access rights,
+                validations, computed fields, and property status workflows.
+              </p>
+
+              <div className="mt-5 flex flex-wrap gap-2">
+                <span className="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300">Odoo</span>
+                <span className="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300">Python</span>
+                <span className="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300">XML</span>
+              </div>
+            </div>
+
+            <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 transition hover:-translate-y-2 hover:border-cyan-400/40">
+              <p className="text-sm text-cyan-300">Web Development</p>
+
+              <h3 className="mt-4 text-2xl font-bold">
+                Personal Portfolio
+              </h3>
+
+              <p className="mt-4 leading-7 text-slate-300">
+                A modern personal portfolio website built with React, Tailwind CSS,
+                and smooth animations to showcase projects, skills, and learning progress.
+              </p>
+
+              <div className="mt-5 flex flex-wrap gap-2">
+                <span className="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300">React</span>
+                <span className="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300">Tailwind</span>
+                <span className="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300">Vite</span>
+              </div>
+            </div>
+          </div>
+                </div>
+      </motion.section>
+
+      <motion.section
+  id="skills"
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.7 }}
+  viewport={{ once: true }}
+  className="scroll-mt-24 px-6 py-24"
+>
+        <div className="mx-auto max-w-6xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-cyan-300">
+            Skills
+          </p>
+
+          <h2 className="mt-6 text-3xl font-bold md:text-4xl">
+            Technologies and areas I am developing.
+          </h2>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-4">
+            <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6">
+              <h3 className="text-xl font-bold text-cyan-300">Programming</h3>
+              <ul className="mt-4 space-y-3 text-slate-300">
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>HTML & CSS</li>
+              </ul>
+            </div>
+
+            <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6">
+              <h3 className="text-xl font-bold text-blue-300">AI & Data</h3>
+              <ul className="mt-4 space-y-3 text-slate-300">
+                <li>AI Applications</li>
+                <li>Prompt Design</li>
+                <li>Problem Solving</li>
+                <li>Learning AI Concepts</li>
+              </ul>
+            </div>
+
+            <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6">
+              <h3 className="text-xl font-bold text-purple-300">ERP</h3>
+              <ul className="mt-4 space-y-3 text-slate-300">
+                <li>Odoo Modules</li>
+                <li>Odoo ORM</li>
+                <li>XML Views</li>
+                <li>Business Workflows</li>
+              </ul>
+            </div>
+
+            <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6">
+              <h3 className="text-xl font-bold text-slate-200">Tools</h3>
+              <ul className="mt-4 space-y-3 text-slate-300">
+                <li>GitHub</li>
+                <li>VS Code</li>
+                <li>Vite</li>
+                <li>Tailwind CSS</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </motion.section>
+            <motion.section
+  id="contact"
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.7 }}
+  viewport={{ once: true }}
+  className="scroll-mt-24 px-6 py-24"
+>
+        <div className="mx-auto max-w-4xl text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-cyan-300">
+            Contact
+          </p>
+
+          <h2 className="mt-6 text-3xl font-bold md:text-5xl">
+            Let’s connect.
+          </h2>
+
+          <p className="mx-auto mt-6 max-w-2xl leading-8 text-slate-300">
+            I am open to learning opportunities, student projects, collaboration,
+            internships, and technical discussions related to AI, software development,
+            ERP systems, and web applications.
+          </p>
+
+          <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+            <a
+              href="mailto:skotthuri@gmail.com"
+              className="rounded-full bg-cyan-400 px-8 py-3 text-sm font-bold text-slate-950 shadow-lg shadow-cyan-400/20 hover:bg-cyan-300"
+            >
+              Email Me
+            </a>
+
+            <a
+              href="https://github.com/vishnu220506"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-slate-600 px-8 py-3 text-sm font-bold text-slate-200 hover:border-cyan-300 hover:text-cyan-300"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/shreevishnu-kotthuri"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-slate-600 px-8 py-3 text-sm font-bold text-slate-200 hover:border-cyan-300 hover:text-cyan-300"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+            </motion.section>
+
+      <footer className="border-t border-slate-800 px-6 py-8 text-center text-sm text-slate-500">
+        © 2026 Shreevishnu Kotthuri. Built with React and Tailwind CSS.
+      </footer>
+    </main>
+  )
+}
+
+export default App
